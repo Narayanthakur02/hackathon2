@@ -1,0 +1,126 @@
+/* public/styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: url('/images/anime-room.jpg') center/cover fixed;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ff69b4;
+}
+
+.dashboard {
+    background: rgba(255, 192, 203, 0.2);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.budget-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    text-align: center;
+}
+
+.amount {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+.anime-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #ffd1dc;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ff69b4;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ffd1dc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #ff69b4;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #ff1493;
+    transform: translateY(-2px);
+}
+
+.expense-list {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ffd1dc;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .budget-summary {
+        grid-template-columns: 1fr;
+    }
+}
