@@ -1,0 +1,64 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawaii Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Kawaii Budget Tracker ✨</h1>
+            <p>Track your expenses with style!</p>
+        </header>
+
+        <div class="dashboard">
+            <div class="budget-summary">
+                <div class="total-budget">
+                    <h2>Total Budget</h2>
+                    <span class="amount">¥0</span>
+                </div>
+                <div class="remaining">
+                    <h2>Remaining</h2>
+                    <span class="amount">¥0</span>
+                </div>
+            </div>
+        </div>
+
+        <form id="expenseForm" class="anime-form">
+            <div class="form-group">
+                <label for="amount">Amount (¥):</label>
+                <input type="number" id="amount" required min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="food">🍜 Food & Dining</option>
+                    <option value="shopping">🛍️ Shopping</option>
+                    <option value="transport">🚇 Transport</option>
+                    <option value="entertainment">🎮 Entertainment</option>
+                    <option value="utilities">💡 Utilities</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <input type="text" id="description" required>
+            </div>
+
+            <button type="submit">Add Expense 💖</button>
+        </form>
+
+        <div class="expense-list">
+            <h2>Recent Expenses</h2>
+            <!-- Expenses will be added here dynamically -->
+        </div>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>
